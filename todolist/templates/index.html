@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+<title>Bootstrap demo</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="container fluid ">
+        <div class="row mt-5">
+            <div class="col-lg-4">
+                <img src="{% static 'images/index-bg.png' alt="HomePage Image"%}" height="280" weidth="420">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/index-bg.png' alt="HomePage Image"%}" height="280" weidth="420">
+            </div>
+            <div class="col-lg-4">
+                <img src="{% static 'images/index-bg.png' alt="HomePage Image"%}" height="280" weidth="420">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div>
+                <center><h1> Quick and Easy to Use Anytime, Anywhere! </h1></center>
+                <center><h3> Plan Your Day Better, Get Your Life Organized </h3></center>
+                <center><strong>TaskManager</strong> helps you to set & track your goals at one place. </h4></center>
+                
+            </div>
+        </div>
+        <div class="row mt-2">
+            <center><a href="{% url 'tasklist' %}"><button type="button" class="btn btn-primary btn-lg">Let's Get Started</button></a></center>
+        </div>
+        
+    </div>
+{% endblock content %}
