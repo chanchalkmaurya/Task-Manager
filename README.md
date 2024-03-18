@@ -1,6 +1,10 @@
 # Task Manager
-
  <p>Make Your Life Easy</p>
+
+## PROJECT SNAPSHOT
+Homepage : ![Screenshot 2024-03-18 105853](https://github.com/chanchalkmaurya/Task-Manager/assets/73050886/72b5d3a3-9315-4c74-8ef6-f7fe5c7e1643)
+Task Page: ![Screenshot 2024-03-18 105909](https://github.com/chanchalkmaurya/Task-Manager/assets/73050886/a27d7f8a-e751-478f-9cdc-f19c60f448c9)
+
 
  
 ## Steps to Run Project
