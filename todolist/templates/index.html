@@ -2,11 +2,21 @@
 {% load static %}
 
 {% block title %}
-<title>Bootstrap demo</title>
+<title> {{title}} </title>
 {% endblock title %}
 
 {% block content %}
-    <div class="container fluid ">
+
+    <div class="container fluid mt-15 ">
+        {% if messages %}
+            {% for message in messages  %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}      
+                </div>
+            {% endfor %}
+        {% endif %}
+
+
         <div class="row mt-5">
             <div class="col-lg-4">
                 <img src="{% static 'images/index-bg.png' alt="HomePage Image"%}" height="280" weidth="420">
@@ -28,7 +38,11 @@
             </div>
         </div>
         <div class="row mt-2">
-            <center><a href="{% url 'tasklist' %}"><button type="button" class="btn btn-primary btn-lg">Let's Get Started</button></a></center>
+            {% if user.is_authenticated %}
+                <center><a href="{% url 'tasklist' %}"><button type="button" class="btn btn-primary btn-lg">Let's Get Started</button></a></center>
+            {% else %}
+            <center><a href="{% url 'login' %}"><button type="button" class="btn btn-primary btn-lg">Login to Start</button></a></center>
+            {% endif %}
         </div>
         
     </div>

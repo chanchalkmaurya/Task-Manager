@@ -5,6 +5,7 @@
 {% block content %}
 <div class="container">
     <br><br>
+    {% if obj.owner == request.user  %}
     <p><b><i>Editing > {{obj.task}} </i></b></p>
     <form method="POST">
         {% csrf_token %}
@@ -21,5 +22,8 @@
           </div>
         </div>
       </form>
+    {% else %}
+        <p> Access Restricted. You're not allowed to edit this task. </p>
+      {% endif %}
 </div>
 {% endblock content %}
